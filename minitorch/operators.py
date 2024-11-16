@@ -12,7 +12,7 @@ from typing import Callable, Iterable
 
 def mul(x: float, y: float) -> float:
     "$f(x, y) = x * y$"
-    print(1)
+    print(2)
     # TODO: Implement for Task 0.1.
     raise NotImplementedError('Need to implement for Task 0.1')
 
