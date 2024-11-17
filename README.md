@@ -3,7 +3,7 @@ The full minitorch student suite.
 
 ![Image 0]([Screenshot 2024-11-17 at 22.51.58.png](https://github.com/NickolayYakovchukfm/minitorch/blob/main/Screenshot%202024-11-17%20at%2022.51.58.png))
 
-![Image 1](Screenshot 2024-11-17 at 23.15.01.png)
+![Image 1]([Screenshot 2024-11-17 at 23.15.01.png](https://github.com/NickolayYakovchukfm/minitorch/blob/main/Screenshot%202024-11-17%20at%2023.15.01.png))
 
 To access the autograder: 
 
