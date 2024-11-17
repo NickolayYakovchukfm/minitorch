@@ -118,7 +118,6 @@ def test_sigmoid(a: float) -> None:
     # TODO: Implement for Task 0.2.
 
 
-
 @pytest.mark.task0_2
 @given(small_floats, small_floats, small_floats)
 def test_transitive(a: float, b: float, c: float) -> None:
@@ -126,7 +125,6 @@ def test_transitive(a: float, b: float, c: float) -> None:
     if a < b and b < c:
         assert a < c
     # TODO: Implement for Task 0.2.
-
 
 
 @pytest.mark.task0_2
@@ -140,7 +138,6 @@ def test_symmetric() -> None:
     # TODO: Implement for Task 0.2.
 
 
-
 @pytest.mark.task0_2
 def test_distribute() -> None:
     r"""
@@ -150,7 +147,6 @@ def test_distribute() -> None:
     x, y, z = 2007, 2030, 2077
     assert_close(mul(z, add(x, y)), add(mul(z, x), mul(z, y)))
     # TODO: Implement for Task 0.2.
-
 
 
 @pytest.mark.task0_2
@@ -171,7 +167,6 @@ def test_other() -> None:
 
     assert_close(inv(inv(x)), x)
     # TODO: Implement for Task 0.2.
-
 
 
 # ## Task 0.3  - Higher-order functions
@@ -201,7 +196,6 @@ def test_sum_distribute(ls1: List[float], ls2: List[float]) -> None:
     """
     assert_close(add(sum(ls1), sum(ls2)), sum(add(ls1[i], ls2[i]) for i in range(len(ls1))))
     # TODO: Implement for Task 0.3.
-
 
 
 @pytest.mark.task0_3

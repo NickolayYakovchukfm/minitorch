@@ -16,12 +16,10 @@ def mul(x: float, y: float) -> float:
     # TODO: Implement for Task 0.1.
 
 
-
 def id(x: float) -> float:
     "$f(x) = x$"
     return float(x)
     # TODO: Implement for Task 0.1.
-
 
 
 def add(x: float, y: float) -> float:
@@ -30,12 +28,10 @@ def add(x: float, y: float) -> float:
     # TODO: Implement for Task 0.1.
 
 
-
 def neg(x: float) -> float:
     "$f(x) = -x$"
     return float(-x)
     # TODO: Implement for Task 0.1.
-
 
 
 def lt(x: float, y: float) -> float:
@@ -47,7 +43,6 @@ def lt(x: float, y: float) -> float:
     # TODO: Implement for Task 0.1.
 
 
-
 def eq(x: float, y: float) -> float:
     "$f(x) =$ 1.0 if x is equal to y else 0.0"
     if x == y:
@@ -55,7 +50,6 @@ def eq(x: float, y: float) -> float:
     else:
         return 0.0
     # TODO: Implement for Task 0.1.
-
 
 
 def max(x: float, y: float) -> float:
@@ -67,7 +61,6 @@ def max(x: float, y: float) -> float:
     # TODO: Implement for Task 0.1.
 
 
-
 def is_close(x: float, y: float) -> float:
     "$f(x) = |x - y| < 1e-2$"
     if abs(x - y) < 1e-2:
@@ -75,7 +68,6 @@ def is_close(x: float, y: float) -> float:
     else:
         return False
     # TODO: Implement for Task 0.1.
-
 
 
 def sigmoid(x: float) -> float:
@@ -97,7 +89,6 @@ def sigmoid(x: float) -> float:
     # TODO: Implement for Task 0.1.
 
 
-
 def relu(x: float) -> float:
     """
     $f(x) =$ x if x is greater than 0, else 0
@@ -109,7 +100,6 @@ def relu(x: float) -> float:
     else:
         return 0
     # TODO: Implement for Task 0.1.
-
 
 
 EPS = 1e-6
@@ -131,19 +121,16 @@ def log_back(x: float, d: float) -> float:
     # TODO: Implement for Task 0.1.
 
 
-
 def inv(x: float) -> float:
     "$f(x) = 1/x$"
     return 1 / x
     # TODO: Implement for Task 0.1.
 
 
-
 def inv_back(x: float, d: float) -> float:
     r"If $f(x) = 1/x$ compute $d \times f'(x)$"
     return -d * 1.0 / x ** 2.0
     # TODO: Implement for Task 0.1.
-
 
 
 def relu_back(x: float, d: float) -> float:
@@ -153,7 +140,6 @@ def relu_back(x: float, d: float) -> float:
     else:
         return d * 1.0
     # TODO: Implement for Task 0.1.
-
 
 
 # ## Task 0.3
@@ -178,12 +164,10 @@ def map(fn: Callable[[float], float]) -> Callable[[Iterable[float]], Iterable[fl
     # TODO: Implement for Task 0.3.
 
 
-
 def negList(ls: Iterable[float]) -> Iterable[float]:
     "Use `map` and `neg` to negate each element in `ls`"
     return map(neg)(ls)
     # TODO: Implement for Task 0.3.
-
 
 
 def zipWith(
@@ -206,13 +190,11 @@ def zipWith(
     # TODO: Implement for Task 0.3.
 
 
-
 def addLists(ls1: Iterable[float], ls2: Iterable[float]) -> Iterable[float]:
     "Add the elements of `ls1` and `ls2` using `zipWith` and `add`"
     return zipWith(add)(ls1, ls2)
     # TODO: Implement for Task 0.3.
     
-
 
 def reduce(
     fn: Callable[[float, float], float], start: float
@@ -238,12 +220,10 @@ def reduce(
     # TODO: Implement for Task 0.3.
 
 
-
 def sum(ls: Iterable[float]) -> float:
     "Sum up a list using `reduce` and `add`."
     return reduce(add, 0)(ls)
     # TODO: Implement for Task 0.3.
-
 
 
 def prod(ls: Iterable[float]) -> float:
@@ -251,3 +231,4 @@ def prod(ls: Iterable[float]) -> float:
     return reduce(mul, 1)(ls)
     # TODO: Implement for Task 0.3.
 
+    
