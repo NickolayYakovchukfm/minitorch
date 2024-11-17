@@ -194,7 +194,7 @@ def addLists(ls1: Iterable[float], ls2: Iterable[float]) -> Iterable[float]:
     "Add the elements of `ls1` and `ls2` using `zipWith` and `add`"
     return zipWith(add)(ls1, ls2)
     # TODO: Implement for Task 0.3.
-    
+
 
 def reduce(
     fn: Callable[[float, float], float], start: float
@@ -230,5 +230,3 @@ def prod(ls: Iterable[float]) -> float:
     "Product of a list using `reduce` and `mul`."
     return reduce(mul, 1)(ls)
     # TODO: Implement for Task 0.3.
-
-    

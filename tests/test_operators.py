@@ -110,6 +110,7 @@ def test_sigmoid(a: float) -> None:
     assert sigmoid(a) >= 0 and sigmoid(a) <= 1
     assert_close(1 - sigmoid(a), sigmoid(-a))
     assert sigmoid(0) == 0.5
+
     def is_str_incr(x, val=0):
         if x >= 0:
             assert sigmoid(x) >= 0.5
@@ -158,8 +159,7 @@ def test_other() -> None:
     3. :math:`\frac{1}{\frac{1}{x}}`
     """
     x, y, z = 2007, 2030, 2077
-    a, b, c = 2024, 2024, 2024
-    
+    a, b, c = 2024, 2024, 2024    
     assert neg(neg(x)) == x
 
     if a == b and b == c:
