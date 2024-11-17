@@ -220,4 +220,3 @@ class EQ(ScalarFunction):
     def backward(ctx: Context, d_output: float) -> Tuple[float, float]:
         # TODO: Implement for Task 1.4.
         return 0.0, 0.0
-
