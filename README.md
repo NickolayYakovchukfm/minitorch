@@ -1,6 +1,9 @@
 # minitorch
 The full minitorch student suite. 
 
+![Image 0](Screenshot 2024-11-17 at 22.51.58.png)
+
+![Image 1](Screenshot 2024-11-17 at 23.15.01.png)
 
 To access the autograder: 
 
