@@ -107,7 +107,6 @@ class Mul(ScalarFunction):
         ctx.save_for_backward(a, b)
         return operators.mul(a, b)
 
-
     @staticmethod
     def backward(ctx: Context, d_output: float) -> Tuple[float, float]:
         # TODO: Implement for Task 1.4.
@@ -123,7 +122,6 @@ class Inv(ScalarFunction):
         # TODO: Implement for Task 1.2.
         ctx.save_for_backward(a)
         return operators.inv(a)
-
 
     @staticmethod
     def backward(ctx: Context, d_output: float) -> float:
@@ -141,13 +139,12 @@ class Neg(ScalarFunction):
         ctx.save_for_backward(a)
         return operators.neg(a)
 
-
     @staticmethod
     def backward(ctx: Context, d_output: float) -> float:
         # TODO: Implement for Task 1.4.
         a = ctx.saved_values
         return operators.neg(d_output)
-    
+
 
 class Sigmoid(ScalarFunction):
     "Sigmoid function"
@@ -157,7 +154,6 @@ class Sigmoid(ScalarFunction):
         # TODO: Implement for Task 1.2.
         ctx.save_for_backward(a)
         return operators.sigmoid(a)
-
 
     @staticmethod
     def backward(ctx: Context, d_output: float) -> float:
@@ -191,7 +187,6 @@ class Exp(ScalarFunction):
         ctx.save_for_backward(a)
         return operators.exp(a)
 
-
     @staticmethod
     def backward(ctx: Context, d_output: float) -> float:
         # TODO: Implement for Task 1.4.
@@ -207,7 +202,6 @@ class LT(ScalarFunction):
         # TODO: Implement for Task 1.2.
         return operators.lt(a, b)
 
-
     @staticmethod
     def backward(ctx: Context, d_output: float) -> Tuple[float, float]:
         # TODO: Implement for Task 1.4.
@@ -222,9 +216,8 @@ class EQ(ScalarFunction):
         # TODO: Implement for Task 1.2.
         return operators.eq(a, b)
 
-
     @staticmethod
     def backward(ctx: Context, d_output: float) -> Tuple[float, float]:
         # TODO: Implement for Task 1.4.
         return 0.0, 0.0
-    
+

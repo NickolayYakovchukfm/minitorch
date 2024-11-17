@@ -119,4 +119,3 @@ def test_two_derivative(
 ) -> None:
     name, _, scalar_fn = fn
     derivative_check(scalar_fn, t1, t2)
-

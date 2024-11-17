@@ -25,7 +25,7 @@ def central_difference(f: Any, *vals: Any, arg: int = 0, epsilon: float = 1e-6) 
     # TODO: Implement for Task 1.1.
     x_list = list(vals)
     x_list[arg] += epsilon
-    num_der = f(*x_list) - f(*vals) # [1, ..., i, ..., n]
+    num_der = f(*x_list) - f(*vals)  # [1, ..., i, ..., n]
     return num_der / epsilon
 
 

@@ -36,14 +36,12 @@ class Module:
             m.train()
         # TODO: Implement for Task 0.4.
 
-
     def eval(self) -> None:
         "Set the mode of this module and all descendent modules to `eval`."
         # TODO: Implement for Task 0.4.
         self.training = False
         for m in self.modules():
             m.eval()
-
 
     def named_parameters(self) -> Sequence[Tuple[str, Parameter]]:
         """
@@ -62,12 +60,10 @@ class Module:
                 names_param.append((f"{name}.{desc_n}", desc_p))
         return names_param
 
-
     def parameters(self) -> Sequence[Parameter]:
         "Enumerate over all the parameters of this module and its descendents."
         # TODO: Implement for Task 0.4.
         return [param for name, param in self.named_parameters()]
-
 
     def add_parameter(self, k: str, v: Any) -> Parameter:
         """
