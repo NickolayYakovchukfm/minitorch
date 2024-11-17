@@ -231,4 +231,3 @@ def prod(ls: Iterable[float]) -> float:
     return reduce(mul, 1)(ls)
     # TODO: Implement for Task 0.3.
 
-
