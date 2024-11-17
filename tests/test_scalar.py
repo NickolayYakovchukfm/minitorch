@@ -104,6 +104,7 @@ def test_two_args(
 def test_one_derivative(
     fn: Tuple[str, Callable[[float], float], Callable[[Scalar], Scalar]], t1: Scalar
 ) -> None:
+    print(fn)
     name, _, scalar_fn = fn
     derivative_check(scalar_fn, t1)
 
@@ -118,3 +119,4 @@ def test_two_derivative(
 ) -> None:
     name, _, scalar_fn = fn
     derivative_check(scalar_fn, t1, t2)
+

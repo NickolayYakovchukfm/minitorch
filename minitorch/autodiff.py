@@ -23,7 +23,10 @@ def central_difference(f: Any, *vals: Any, arg: int = 0, epsilon: float = 1e-6) 
         An approximation of $f'_i(x_0, \ldots, x_{n-1})$
     """
     # TODO: Implement for Task 1.1.
-    raise NotImplementedError('Need to implement for Task 1.1')
+    x_list = list(vals)
+    x_list[arg] += epsilon
+    num_der = f(*x_list) - f(*vals) # [1, ..., i, ..., n]
+    return num_der / epsilon
 
 
 variable_count = 1
@@ -62,7 +65,26 @@ def topological_sort(variable: Variable) -> Iterable[Variable]:
         Non-constant Variables in topological order starting from the right.
     """
     # TODO: Implement for Task 1.4.
-    raise NotImplementedError('Need to implement for Task 1.4')
+    new_order = []
+    already_get = []
+
+    def top_search(vert):
+        if vert.is_constant():
+            return
+        already_get.append(vert.unique_id)
+        if vert.is_leaf():
+            new_order.append(vert)
+            return
+        for el in vert.history.inputs:
+            if el.unique_id in already_get:
+                continue
+            top_search(el)
+        new_order.append(vert)
+
+    top_search(variable)
+    order = new_order[::-1]
+
+    return order
 
 
 def backpropagate(variable: Variable, deriv: Any) -> None:
@@ -77,7 +99,19 @@ def backpropagate(variable: Variable, deriv: Any) -> None:
     No return. Should write to its results to the derivative values of each leaf through `accumulate_derivative`.
     """
     # TODO: Implement for Task 1.4.
-    raise NotImplementedError('Need to implement for Task 1.4')
+    top_order = topological_sort(variable)
+    grad_dict = {variable.unique_id: deriv}
+    for vert in top_order:
+        if vert.is_leaf():
+            vert.accumulate_derivative(grad_dict[vert.unique_id])
+
+        else:
+            for var, com_der in vert.chain_rule(grad_dict[vert.unique_id]):
+                if var.unique_id in grad_dict:
+                    grad_dict[var.unique_id] += com_der
+
+                else:
+                    grad_dict[var.unique_id] = com_der
 
 
 @dataclass

@@ -96,9 +96,9 @@ def relu(x: float) -> float:
     (See https://en.wikipedia.org/wiki/Rectifier_(neural_networks) .)
     """
     if x > 0:
-        return x
+        return float(x)
     else:
-        return 0
+        return float(0.0)
     # TODO: Implement for Task 0.1.
 
 
@@ -129,16 +129,16 @@ def inv(x: float) -> float:
 
 def inv_back(x: float, d: float) -> float:
     r"If $f(x) = 1/x$ compute $d \times f'(x)$"
-    return -d * 1.0 / x ** 2.0
+    return float(neg(d) / mul(x, x))
     # TODO: Implement for Task 0.1.
 
 
 def relu_back(x: float, d: float) -> float:
     r"If $f = relu$ compute $d \times f'(x)$"
     if x <= 0:
-        return 0.0
+        return float(0.0)
     else:
-        return d * 1.0
+        return float(d)
     # TODO: Implement for Task 0.1.
 
 
