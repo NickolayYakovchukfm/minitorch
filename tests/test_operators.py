@@ -159,7 +159,7 @@ def test_other() -> None:
     3. :math:`\frac{1}{\frac{1}{x}}`
     """
     x, y, z = 2007, 2030, 2077
-    a, b, c = 2024, 2024, 2024    
+    a, b, c = 2024, 2024, 2024
     assert neg(neg(x)) == x
 
     if a == b and b == c:
